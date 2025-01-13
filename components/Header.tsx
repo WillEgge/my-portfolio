@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-white shadow-md z-50">
+      <header className="bg-white shadow-md z-50 sticky top-10 rounded-full">
         <div className="container mx-auto flex items-center justify-between py-4 px-6">
           <Link href="/" onClick={closeMenu}>
             <span>Home</span>
