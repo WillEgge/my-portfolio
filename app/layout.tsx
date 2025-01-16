@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Container from "@/components/Container";
+import { Providers } from "@/components/Providers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,13 +21,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <Container>
-        <Header />
-        {children}
-        <Footer />
-        </Container>
+        <Providers>
+          <Container>
+            <Header />
+            {children}
+            <Footer />
+          </Container>
+        </Providers>
       </body>
     </html>
   );

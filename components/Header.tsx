@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-white shadow-md z-50 sticky top-10 rounded-full">
+      <header className="shadow-md z-50 sticky top-10 rounded-full">
         <div className="container mx-auto flex items-center justify-between py-4 px-6">
           <Link href="/" onClick={closeMenu}>
             <span>Home</span>
@@ -81,5 +82,8 @@ const MenuItems = ({ closeMenu }: MenuProps) => (
         Projects
       </Link>
     </li>
+    <div>
+      <ThemeToggle />
+    </div>
   </>
 );
