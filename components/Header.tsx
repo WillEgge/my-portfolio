@@ -19,7 +19,7 @@ export default function Header() {
           <Link href="/" onClick={closeMenu}>
             <span>Home</span>
           </Link>
-          <nav className="md:block">
+          <nav className="hidden md:block">
             <DesktopMenu closeMenu={closeMenu} />
           </nav>
           <div className="md:hidden">
@@ -30,7 +30,7 @@ export default function Header() {
         </div>
         <div
           className={`
-          md:hidden absolute top-full left-0 right-0 bg-black
+          md:hidden absolute top-full left-0 right-0 
           shadow-md transition-all duration-300 ease-in-out
           ${
             isOpen
@@ -68,7 +68,7 @@ const MenuItems = ({ closeMenu }: MenuProps) => (
       <Link
         href="/about"
         onClick={closeMenu}
-        className="block py-2 px-4 text-gray-700 hover:text-black"
+        className="block py-2 px-4"
       >
         About
       </Link>
@@ -77,7 +77,7 @@ const MenuItems = ({ closeMenu }: MenuProps) => (
       <Link
         href="/projects"
         onClick={closeMenu}
-        className="block py-2 px-4 text-gray-700 hover:text-black"
+        className="block py-2 px-4"
       >
         Projects
       </Link>
