@@ -13,10 +13,10 @@ export default function ThemeToggle() {
   if (!mounted) return <Button onClick={() => setTheme("light")}>🌞</Button>;
 
   if (resolvedTheme === "dark") {
-    return <Button onClick={() => setTheme("light")}>🌞</Button>;
+    return <Button variant="outline" onClick={() => setTheme("light")}>🌞</Button>;
   }
 
   if (resolvedTheme === "light") {
-    return <Button onClick={() => setTheme("dark")}>🌜</Button>;
+    return <Button variant="outline" onClick={() => setTheme("dark")}>🌜</Button>;
   }
 }
