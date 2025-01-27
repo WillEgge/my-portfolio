@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="shadow-md z-50 sticky top-10 rounded-full">
+      <header className="bg-background shadow-md z-50 sticky top-10 rounded-full">
         <div className="container mx-auto flex items-center justify-between py-4 px-6">
           <Link href="/" onClick={closeMenu}>
             <span>Home</span>
@@ -34,7 +34,7 @@ export default function Header() {
           shadow-md transition-all duration-300 ease-in-out
           ${
             isOpen
-              ? "opacity-100 translate-y-0"
+              ? "opacity-100 bg-background translate-y-0"
               : "opacity-0 translate-y-2 pointer-events-none"
           } 
           `}
@@ -65,20 +65,12 @@ const MobileMenu = ({ closeMenu }: MenuProps) => (
 const MenuItems = ({ closeMenu }: MenuProps) => (
   <>
     <li>
-      <Link
-        href="/about"
-        onClick={closeMenu}
-        className="block py-2 px-4"
-      >
+      <Link href="/about" onClick={closeMenu} className="block py-2 px-4">
         About
       </Link>
     </li>
     <li>
-      <Link
-        href="/projects"
-        onClick={closeMenu}
-        className="block py-2 px-4"
-      >
+      <Link href="/projects" onClick={closeMenu} className="block py-2 px-4">
         Projects
       </Link>
     </li>
